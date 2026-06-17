@@ -34,9 +34,18 @@ const {author} = details;
 //details > author
 
  
-console.log('Song: ' , anothersong );
-console.log('Duration: ' , duration);
-console.log('Author: ' , author);
+//console.log('Song: ' , anothersong );
+//console.log('Duration: ' , duration);
+//console.log('Author: ' , author);
 
+
+const dbz: string[] = ['Goku', 'Vegeta', 'Trunks'];
+
+console.log('Personaje 3 : ' , dbz[2]);
+console.log('Personaje 4 : ' , dbz[3]|| 'No se encontró el personaje'); //desestructuración básica con arreglos
+
+const [,,trunks = 'Not Found'] : string[] = ['Goku', 'Vegeta',]; //desestructuración básica con arreglos
+
+console.log('Personaje 3 : ' , trunks);
 
 export {};
