@@ -1,3 +1,4 @@
+/*
 export interface RESTCountry {
   name: Name;
   tld: string[];
@@ -115,4 +116,62 @@ export interface Translation {
 export interface PostalCode {
   format: string;
   regex: string;
+}
+*/
+
+export interface RESTCountry {
+
+  names: {
+    common: string;
+    official: string;
+
+    native?: {
+      spa?: {
+        common: string;
+        official: string;
+      };
+    };
+
+    translations?: {
+      spa?: {
+        common: string;
+        official: string;
+      };
+    };
+  };
+
+  capitals: {
+    name: string;
+  }[];
+
+  codes: {
+    alpha_2: string;
+    alpha_3: string;
+  };
+
+  flag: {
+    emoji: string;
+    url_png: string;
+    url_svg: string;
+  };
+
+  population: number;
+  region: string;
+  subregion: string;
+
+}
+
+export interface RestCountriesResponse {
+  data: {
+    objects: RESTCountry[];
+    meta: {
+      total: number;
+      count: number;
+      limit: number;
+      offset: number;
+      more: boolean;
+      request_id: string;
+      duration: number;
+    };
+  };
 }
