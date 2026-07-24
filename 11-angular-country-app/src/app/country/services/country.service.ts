@@ -70,7 +70,7 @@ export class CountryService {
         { headers }).pipe(
       map((resp) => CountryMapper.mapRestCountryArrayToCountryArray(resp.data.objects)),
       tap((countries) => this.queryCacheCountry.set(query, countries)),
-      delay(2000),
+      delay(1000),
       catchError((error) => {
         console.log('Error fetching ', error);
 
