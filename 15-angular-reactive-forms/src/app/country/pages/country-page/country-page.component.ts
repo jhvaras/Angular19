@@ -1,7 +1,7 @@
 import { JsonPipe } from '@angular/common';
 import { Component, effect, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { CountryService } from '../../services/country.service';
+import { CountryService } from '../../services/country.service'; 
 import { Country } from '../../interfaces/country.interface';
 import { filter, switchMap, tap } from 'rxjs';
 
@@ -50,6 +50,7 @@ export class CountryPageComponent {
         )
       )
       .subscribe((countries) => {
+        //console.log('PAISES RECIBIDOS:', countries);
         this.countriesByRegion.set(countries);
       });
   }

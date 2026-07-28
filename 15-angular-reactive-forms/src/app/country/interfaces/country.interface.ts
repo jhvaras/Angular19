@@ -1,4 +1,5 @@
-export interface Country {
+/*
+ export interface Country {
   name: Name;
   cca3: string;
   borders: string[];
@@ -13,4 +14,17 @@ export interface Name {
 export interface NativeName {
   official: string;
   common: string;
+}
+*/
+
+export interface Country {
+  names: {
+    common: string;
+  };
+
+  codes: {
+    alpha_3: string;
+  };
+
+  borders: string[];
 }

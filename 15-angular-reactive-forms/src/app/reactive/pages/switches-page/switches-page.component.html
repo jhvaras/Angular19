@@ -53,10 +53,7 @@
     <label class="col-sm-3 col-form-label"></label>
     <div class="col-sm-9">
       <div
-        [class.text-danger]="
-          formUtils.isValidField(myForm, 'termAndConditions')
-        "
-        class="form-check"
+        [class.text-danger]=" formUtils.isValidField(myForm, 'termAndConditions') "  class="form-check"
       >
         <input
           class="form-check-input"
