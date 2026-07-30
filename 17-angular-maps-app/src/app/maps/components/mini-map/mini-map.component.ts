@@ -8,6 +8,9 @@ import {
 import mapboxgl from 'mapbox-gl';
 import { environment } from '../../../../environments/environment';
 
+console.log(environment);
+console.log(environment.mapboxKey);
+
 mapboxgl.accessToken = environment.mapboxKey;
 /**
  * width 100%
@@ -38,7 +41,7 @@ export class MiniMapComponent implements AfterViewInit {
     await new Promise((resolve) => setTimeout(resolve, 80));
 
     const element = this.divElement()!.nativeElement;
-
+    console.log('Token:', mapboxgl.accessToken);
     const map = new mapboxgl.Map({
       container: element, // container ID
       style: 'mapbox://styles/mapbox/streets-v12', // style URL
@@ -48,6 +51,6 @@ export class MiniMapComponent implements AfterViewInit {
       pitch: 30,
     });
 
-    new mapboxgl.Marker().setLngLat(this.lngLat()).addTo(map);
+    //new mapboxgl.Marker().setLngLat(this.lngLat()).addTo(map);
   }
 }

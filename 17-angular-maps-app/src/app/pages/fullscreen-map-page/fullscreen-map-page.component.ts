@@ -23,9 +23,9 @@ mapboxgl.accessToken = environment.mapboxKey;
     }
 
     #controls {
-      background-color: white;
+      background-color: white;  
       padding: 10px;
-      border-radius: 5px;
+      border-radius: 25px;
       position: fixed;
       bottom: 25px;
       right: 20px;
@@ -41,10 +41,10 @@ export class FullscreenMapPageComponent implements AfterViewInit {
   divElement = viewChild<ElementRef>('map');
   map = signal<mapboxgl.Map | null>(null);
 
-  zoom = signal(14);
+  zoom = signal(18);
   coordinates = signal({
-    lng: -74.5,
-    lat: 40,
+    lng: -77.0376,
+    lat: -12.0376,
   });
 
   zoomEffect = effect(() => {

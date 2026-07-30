@@ -37,8 +37,8 @@ export class MarkersPageComponent implements AfterViewInit {
     const map = new mapboxgl.Map({
       container: element, // container ID
       style: 'mapbox://styles/mapbox/streets-v12', // style URL
-      center: [-122.40985, 37.793085], // starting position [lng, lat]
-      zoom: 14,
+      center: [-77.0376, -12.0376], // starting position [lng, lat]
+      zoom: 16,
     });
 
     // const marker = new mapboxgl.Marker({
